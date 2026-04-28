@@ -1,0 +1,89 @@
+export default function NLFarmingWebsite() { return ( <div className="min-h-screen bg-black text-white"> {/* Header */} <header className="bg-black border-b border-cyan-500 sticky top-0 z-50"> <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"> <h1 className="text-2xl font-bold text-cyan-400">NL Farming</h1> <nav className="hidden md:flex gap-6 text-sm font-medium"> <a href="#home" className="hover:text-cyan-400">Home</a> <a href="#about" className="hover:text-cyan-400">About</a> <a href="#services" className="hover:text-cyan-400">Services</a> <a href="#gallery" className="hover:text-cyan-400">Gallery</a> <a href="#contact" className="hover:text-cyan-400">Contact</a> </nav> </div> </header>
+
+{/* Hero Section */}
+  <section id="home" className="py-24 px-6 text-center bg-gradient-to-b from-black to-cyan-950">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Welcome to <span className="text-cyan-400">NL Farming</span>
+      </h2>
+      <p className="text-lg text-gray-300 mb-8">
+        Professional farming solutions for modern agriculture. Sustainable growth, fresh produce, and smart farming practices for a better future.
+      </p>
+      <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-8 py-3 rounded-2xl shadow-lg">
+        Explore Services
+      </button>
+    </div>
+  </section>
+
+  {/* About */}
+  <section id="about" className="py-20 px-6 max-w-6xl mx-auto">
+    <h3 className="text-4xl font-bold text-cyan-400 mb-6">About Us</h3>
+    <p className="text-gray-300 text-lg leading-relaxed">
+      NL Farming is dedicated to providing high-quality agricultural services with innovation and professionalism. We focus on crop management, hydroponic farming, vegetable production, and sustainable farming methods to help farmers and businesses grow successfully.
+    </p>
+  </section>
+
+  {/* Services */}
+  <section id="services" className="py-20 px-6 bg-cyan-950/20">
+    <div className="max-w-6xl mx-auto">
+      <h3 className="text-4xl font-bold text-cyan-400 mb-10">Our Services</h3>
+      <div className="grid md:grid-cols-3 gap-8">
+        {[
+          "Hydroponic Farming",
+          "Vegetable Production",
+          "Crop Management",
+          "Organic Farming",
+          "Farm Consultation",
+          "Agriculture Supply"
+        ].map((service, index) => (
+          <div key={index} className="border border-cyan-500 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
+            <h4 className="text-xl font-semibold mb-3">{service}</h4>
+            <p className="text-gray-300 text-sm">
+              Professional support and solutions tailored for successful farming results.
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Gallery */}
+  <section id="gallery" className="py-20 px-6 max-w-6xl mx-auto">
+    <h3 className="text-4xl font-bold text-cyan-400 mb-10">Gallery</h3>
+    <div className="grid md:grid-cols-3 gap-6">
+      {[1, 2, 3, 4, 5, 6].map((item) => (
+        <div key={item} className="h-48 rounded-2xl border border-cyan-500 flex items-center justify-center text-gray-400">
+          Farming Image {item}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Contact */}
+  <section id="contact" className="py-20 px-6 bg-cyan-950/20">
+    <div className="max-w-4xl mx-auto text-center">
+      <h3 className="text-4xl font-bold text-cyan-400 mb-6">Contact Us</h3>
+      <p className="text-gray-300 mb-6">
+        Get in touch for farming consultation, partnerships, and agriculture services.
+      </p>
+      <div className="space-y-2 text-lg">
+        <p>Email: info@nlfarming.com</p>
+        <p>Phone: +91 9004037362</p>
+        <a
+          href="https://wa.me/919004037362"
+          className="inline-block mt-4 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 rounded-2xl shadow-lg"
+        >
+          WhatsApp Us
+        </a>
+        <p>Location: India</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="border-t border-cyan-500 py-6 text-center text-gray-400 text-sm">
+    © 2026 NL Farming. All Rights Reserved.
+  </footer>
+</div>
+
+); }
